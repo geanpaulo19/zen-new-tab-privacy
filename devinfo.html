@@ -44,23 +44,21 @@
       text-decoration: underline;
     }
     ul {
-  list-style: none; /* remove default bullets */
-  margin-left: 0;   /* reset margin */
-  padding-left: 0;  /* reset padding */
-}
-
-ul li {
-  margin-bottom: 6px;
-  position: relative;
-  padding-left: 12px;
-}
-
-ul li::before {
-  content: '•';
-  color: #1e88e5;
-  position: absolute;
-  left: 0;
-}
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 12px;
+    }
+    ul li::before {
+      content: '•';
+      color: #1e88e5;
+      position: absolute;
+      left: 0;
+    }
     .changelog-item {
       display: flex;
       background: #fff;
@@ -98,7 +96,6 @@ ul li::before {
       margin-bottom: 8px;
     }
 
-    /* Cards Container */
     .cards-container {
       display: flex;
       flex-wrap: wrap;
@@ -197,24 +194,16 @@ ul li::before {
   <h2>Changelog</h2>
 
   <div class="changelog-item">
-  <div class="version-badge">v2.0.0</div>
-  <div class="date">2025-12-25</div>
-  <ul>
-    <li>Mini calendar tooltip on date hover</li>
-    <li>Weather widget with hourly tooltip</li>
-    <li>Per-digit time animation</li>
-    <li>Background image fetch & caching</li>
-    <li>Particles toggle button</li>
-    <li>Random quotes feature integrated</li>
-  </ul>
-</div>
-
-  <div class="changelog-item">
-    <div class="version-badge">v1.0.0</div>
+    <div class="version-badge">v1.0</div>
     <div>
-      <div class="date">2025-12-20</div>
+      <div class="date">2025-12-31</div>
       <ul>
-        <li>Initial release with basic time, date, and color scheme</li>
+        <li>Initial public release</li>
+        <li>Real-time clock & date with 12/24-hour toggle</li>
+        <li>Daily mantras from ZenQuotes & TypeFit</li>
+        <li>Beautiful background images from Unsplash, Pexels, and Lorem Picsum</li>
+        <li>Weather display using user location</li>
+        <li>No tracking or analytics, all features operate locally</li>
       </ul>
     </div>
   </div>
