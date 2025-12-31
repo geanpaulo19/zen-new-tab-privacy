@@ -64,25 +64,28 @@
   <p>Effective Date: December 31, 2025</p>
 
   <h2>1. Introduction</h2>
-  <p>Zen New Tab is a minimal Chrome extension providing time, date, daily mantras, and beautiful background images. This Privacy Policy explains how your information is handled.</p>
+  <p>Zen New Tab is a minimal Chrome extension providing time, date, daily mantras, weather, and beautiful background images. This Privacy Policy explains how your information is handled.</p>
 
   <h2>2. Data Collection</h2>
-  <p>This extension does <strong>not</strong> collect any personal data from you. It operates entirely locally in your browser.</p>
+  <p>This extension does <strong>not</strong> collect personal data. All features operate locally in your browser.</p>
 
   <h2>3. API Usage</h2>
   <p>The extension fetches data from the following sources:</p>
   <ul>
-    <li><strong>Unsplash (via Vercel proxy):</strong> Retrieves daily background images without exposing API keys.</li>
-    <li><strong>Pexels (via Vercel proxy):</strong> Retrieves background images.</li>
+    <li><strong>Unsplash (via Vercel proxy):</strong> Retrieves daily background images.</li>
+    <li><strong>Pexels (via Vercel proxy):</strong> Retrieves daily background images.</li>
     <li><strong>Lorem Picsum:</strong> Retrieves random background images.</li>
-    <li><strong>ZenQuotes & TypeFit:</strong> Retrieves daily mantras and quotes.</li>
+    <li><strong>ZenQuotes & TypeFit:</strong> Retrieves daily mantras and motivational quotes.</li>
+    <li><strong>Open-Meteo:</strong> Retrieves current weather based on your location.</li>
+    <li><strong>Nominatim (OpenStreetMap):</strong> Converts coordinates into readable location names.</li>
   </ul>
-  <p>No personal information is sent to these APIs. All requests are anonymous.</p>
+  <p>No personal information is sent to these APIs. Location is used solely for weather display, and all requests are anonymous.</p>
 
   <h2>4. Local Storage</h2>
   <p>The extension stores minimal temporary data locally in your browser:</p>
   <ul>
     <li>Cached background image (to reduce API calls)</li>
+    <li>Time format preference (12/24-hour)</li>
   </ul>
   <p>All stored data remains on your device and is never transmitted elsewhere.</p>
 
