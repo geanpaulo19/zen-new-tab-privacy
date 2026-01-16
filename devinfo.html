@@ -9,16 +9,17 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       max-width: 800px;
-      margin: 50px auto;
-      padding: 0 20px;
+      margin: 50px auto;      padding: 0 20px;
       line-height: 1.6;
       color: #333;
-      background-color: #f9f9f9;
+      background-color: #fff;
     }
     header {
       display: flex;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
     }
     header img {
       width: 50px;
@@ -27,73 +28,65 @@
     }
     h1 {
       color: #2c3e50;
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin: 0;
     }
     h2 {
       color: #2c3e50;
-      margin-top: 35px;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
+      margin-top: 40px;
+      font-size: 1.4rem;
+      border-left: 4px solid #1e88e5;
+      padding-left: 10px;
     }
-    a {
-      color: #1e88e5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .highlight-box {
+      background-color: #f1f8ff;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #d1e9ff;
+      margin: 20px 0;
     }
     ul {
       list-style: none;
-      margin-left: 0;
       padding-left: 0;
     }
     ul li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       position: relative;
-      padding-left: 12px;
+      padding-left: 20px;
     }
     ul li::before {
-      content: '•';
+      content: '→';
       color: #1e88e5;
       position: absolute;
       left: 0;
+      font-weight: bold;
     }
     .changelog-item {
-      display: flex;
       background: #fff;
-      padding: 20px 20px 20px 60px;
+      padding: 25px;
       border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin-bottom: 25px;
+      border: 1px solid #eee;
       position: relative;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: box-shadow 0.2s;
     }
     .changelog-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
-    .changelog-item .version-badge {
-      position: absolute;
-      left: -30px;
-      top: 50%;
-      transform: translateY(-50%);
+    .version-tag {
+      display: inline-block;
       background: #1e88e5;
       color: #fff;
+      padding: 2px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
       font-weight: 600;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      font-size: 0.9rem;
+      margin-bottom: 10px;
     }
-    .changelog-item .date {
+    .date {
       font-size: 0.85rem;
       color: #888;
-      margin-bottom: 8px;
+      margin-left: 10px;
     }
 
     .cards-container {
@@ -101,60 +94,57 @@
       flex-wrap: wrap;
       gap: 20px;
       margin-top: 30px;
-      justify-content: center;
     }
     .card {
-      background: linear-gradient(135deg, #fff, #f7f7f7);
-      padding: 25px 20px;
+      background: #fff;
+      padding: 30px 20px;
       border-radius: 15px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.07);
-      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #eee;
+      transition: transform 0.2s;
       flex: 1;
-      min-width: 260px;
-      max-width: 360px;
+      min-width: 280px;
       text-align: center;
     }
     .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+      transform: translateY(-5px);
     }
     .card img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
+      border: 3px solid #f0f0f0;
     }
     .card h3 {
-      margin: 10px 0 5px 0;
-      font-weight: 600;
+      margin: 0;
       color: #2c3e50;
     }
-    .card .role, .card .email, .card .paypal {
+    .card .role {
       font-size: 0.9rem;
-      color: #555;
-      margin: 5px 0;
+      color: #1e88e5;
+      font-weight: 500;
+      margin-bottom: 10px;
     }
-    .card .socials {
-      margin-top: 12px;
+    .socials {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
     }
     .social-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: #f0f0f0;
-      color: #1e88e5;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: background 0.2s, color 0.2s;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #555;
       text-decoration: none;
+      transition: 0.2s;
     }
     .social-icon:hover {
       background: #1e88e5;
@@ -162,8 +152,8 @@
     }
     .donate-button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 10px 22px;
+      margin-top: 15px;
+      padding: 10px 25px;
       background: #ffc439;
       color: #111;
       font-weight: 600;
@@ -171,18 +161,17 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .donate-button:hover {
-      background: #ffb347;
-    }
+    .donate-button:hover { background: #ffb347; }
+    
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
+      color: #888;
     }
-    footer a {
-      color: #1e88e5;
-    }
+    footer a { color: #1e88e5; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -191,71 +180,49 @@
     <h1>Zen New Tab</h1>
   </header>
 
+  <section class="highlight-box">
+    <strong>Continuous Improvement:</strong> We are dedicated to keeping Zen New Tab the most minimalist and focused dashboard for your browser. Below you can find the history of our updates and features.
+  </section>
+
   <h2>Changelog</h2>
 
-  <!-- v1.2 -->
-<div class="changelog-item">
-  <div class="version-badge">v1.2</div>
-  <div>
-    <div class="date">2026-01-15</div>
+  <div class="changelog-item">
+    <span class="version-tag">v1.2</span>
+    <span class="date">January 16, 2026</span>
     <ul>
-      <li>Added subtle weather widget that uses device location (geolocation) to show current weather</li>
-      <li>Added a search bar</li>
-      <li>Updated placeholder text for the search bar for better clarity</li>
-      <li>General UI improvements, responsive adjustments, and smoother element transitions</li>
+      <li>Added 🌤️ subtle weather widget using local geolocation data.</li>
+      <li>Integrated 🔍 streamlined search bar with real-time suggestions.</li>
+      <li>Enhanced UI with smoother transitions and responsive scaling.</li>
+      <li>Refined placeholder text for a more minimalist experience.</li>
     </ul>
   </div>
-</div>
 
-  <!-- v1.1 -->
   <div class="changelog-item">
-    <div class="version-badge">v1.1</div>
-    <div>
-      <div class="date">2026-01-05</div>
-      <ul>
-        <li>Main time display adjusted to 10rem on desktop for better readability.</li>
-        <li>Smoother scaling and subtle hover pop on the time element.</li>
-        <li>All main elements (date, mantra) now scale responsively across all devices.</li>
-        <li>Container and background now scale smoothly when resizing the window, creating a “breathing” effect.</li>
-        <li>General visual enhancements for a polished, modern look.</li>
-      </ul>
-    </div>
+    <span class="version-tag">v1.1</span>
+    <span class="date">January 05, 2026</span>
+    <ul>
+      <li>Optimized main time display for better desktop readability.</li>
+      <li>Implemented "breathing" container effects for responsive resizing.</li>
+      <li>Improved element entrance animations using cubic-bezier curves.</li>
+    </ul>
   </div>
 
-  <!-- v1.0.1 -->
   <div class="changelog-item">
-    <div class="version-badge">v1.0.1</div>
-    <div>
-      <div class="date">2026-01-03</div>
-      <ul>
-        <li>Fixed light mode font color issue — text now remains visible in all themes</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- v1.0 -->
-  <div class="changelog-item">
-    <div class="version-badge">v1.0</div>
-    <div>
-      <div class="date">2026-01-02</div>
-      <ul>
-        <li>Initial public release</li>
-        <li>Real-time clock & date with 12/24-hour toggle</li>
-        <li>Daily mantras from ZenQuotes & TypeFit</li>
-        <li>Beautiful background images from Unsplash, Pexels, and Lorem Picsum</li>
-        <li>No tracking or analytics, all features operate locally</li>
-      </ul>
-    </div>
+    <span class="version-tag">v1.0</span>
+    <span class="date">January 02, 2026</span>
+    <ul>
+      <li>Initial public release of the Zen New Tab experience.</li>
+      <li>12/24-hour clock toggle and daily inspiration quotes.</li>
+      <li>Multi-source background imagery (Unsplash, Pexels, Picsum).</li>
+    </ul>
   </div>
 
   <h2>Developer & Support</h2>
   <div class="cards-container">
-    <!-- Developer Card -->
     <div class="card">
       <img src="https://i.imgur.com/dZ0o6cf.jpeg" alt="Developer Photo">
       <h3>Gean Paulo</h3>
-      <p class="role">Web Developer / Designer</p>
-      <p class="email"><a href="mailto:geanpaulo@mail.com">geanpaulo@mail.com</a></p>
+      <p class="role">Lead Developer</p>
       <div class="socials">
         <a href="https://facebook.com/geanpaulofrancois" target="_blank" class="social-icon">FB</a>
         <a href="https://instagram.com/geanpau.lo" target="_blank" class="social-icon">IG</a>
@@ -263,18 +230,17 @@
       </div>
     </div>
 
-    <!-- PayPal Donation Card -->
     <div class="card">
       <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo">
-      <h3>Support Development</h3>
-      <p class="paypal">If you enjoy Zen New Tab, consider supporting via PayPal.</p>
-      <a href="https://www.paypal.me/GeanPaulo" target="_blank" class="donate-button">Donate</a>
+      <h3>Support Zen</h3>
+      <p style="font-size: 0.9rem; color: #666;">Keep the project ad-free and minimal.</p>
+      <a href="https://www.paypal.me/GeanPaulo" target="_blank" class="donate-button">Donate via PayPal</a>
     </div>
   </div>
 
   <footer>
-    <p><a href="https://geanpaulo19.github.io/zen-new-tab-privacy/privacy.html" target="_blank">Privacy Policy</a></p>
-    &copy; 2026 Zen New Tab. All rights reserved.
+    <p><a href="https://geanpaulo19.github.io/zen-new-tab-privacy/privacy.html">Privacy Policy</a></p>
+    &copy; 2026 Zen New Tab. Built for focus.
   </footer>
 </body>
 </html>
