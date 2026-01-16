@@ -13,12 +13,14 @@
       padding: 0 20px;
       line-height: 1.6;
       color: #333;
-      background-color: #f9f9f9;
+      background-color: #fff;
     }
     header {
       display: flex;
       align-items: center;
       margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
     }
     header img {
       width: 50px;
@@ -27,12 +29,22 @@
     }
     h1 {
       color: #2c3e50;
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin: 0;
     }
     h2 {
       color: #2c3e50;
-      margin-top: 25px;
-      font-size: 1.3rem;
+      margin-top: 30px;
+      font-size: 1.4rem;
+      border-left: 4px solid #1e88e5;
+      padding-left: 10px;
+    }
+    .highlight-box {
+      background-color: #f1f8ff;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #d1e9ff;
+      margin: 20px 0;
     }
     a {
       color: #1e88e5;
@@ -44,14 +56,13 @@
     ul {
       margin-left: 20px;
     }
-    p {
-      margin-top: 10px;
-    }
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
+      color: #888;
     }
   </style>
 </head>
@@ -61,55 +72,53 @@
     <h1>Zen New Tab - Privacy Policy</h1>
   </header>
 
-  <p>Effective Date: January 15, 2026</p>
+  <p><strong>Effective Date:</strong> January 16, 2026</p>
 
-  <h2>1. Introduction</h2>
-  <p>Zen New Tab is a minimal Chrome extension providing time, date, daily quotes, beautiful backgrounds, a search bar with multiple engines, and subtle weather information. This Privacy Policy explains how data is handled.</p>
+  <section class="highlight-box">
+    <strong>Commitment to Privacy:</strong> Zen New Tab is designed to be a private-by-default, minimalist dashboard. We do not track you, we do not sell your data, and we do not collect any personally identifiable information (PII).
+  </section>
 
-  <h2>2. Data Collection</h2>
-  <p>This extension does <strong>not</strong> collect personal data. All features operate locally in the browser.</p>
+  <h2>1. Single Purpose & Description</h2>
+  <p>Zen New Tab provides a unified minimalist dashboard that streamlines your start-page experience. It harmonizes essential elements—time, date, daily inspiration, weather, and integrated search—into one cohesive interface to eliminate digital clutter.</p>
 
-  <h2>3. API Usage</h2>
-  <p>The extension fetches data from the following sources:</p>
+  <h2>2. Data Collection and Limited Use</h2>
+  <p>This extension does <strong>not</strong> collect personal data. All features operate locally within your browser. <strong>Zen New Tab adheres to the Google Web Store Limited Use Policy:</strong></p>
   <ul>
-    <li><strong>Unsplash, Pexels & Lorem Picsum (via Vercel proxy):</strong> Retrieves background images.</li>
-    <li><strong>ZenQuotes & TypeFit:</strong> Retrieves daily motivational quotes.</li>
-    <li><strong>DummyJSON, FreeAPI, Quotes-DB:</strong> Additional sources for quotes.</li>
-    <li><strong>Open-Meteo:</strong> Fetches current weather using approximate location (geolocation).</li>
-    <li><strong>GeanPaulo Search API:</strong> Provides anonymous search suggestions. When you type in the search bar, your keystrokes are sent to this server <em>solely</em> to generate suggestions. No personally identifiable information is stored or linked to your identity. The API only returns JSON suggestions and never executable code.</li>
+    <li>We do not use or transfer data for serving ads, including retargeting or personalized advertising.</li>
+    <li>We do not allow humans to read user data unless we have first obtained your affirmative agreement for specific purposes (e.g., tech support).</li>
   </ul>
-  <p>All requests are anonymous and no personal information is transmitted to these APIs.</p>
 
-  <h2>4. Geolocation</h2>
-  <p>Geolocation is used <strong>only</strong> to fetch the current weather at the device's location. Location is not stored, shared, or transmitted elsewhere.</p>
+  <h2>3. API Usage & Search Functionality</h2>
+  <p>The extension fetches dynamic content to power the dashboard via secure (HTTPS) requests:</p>
+  <ul>
+    <li><strong>Backgrounds:</strong> Retrieves high-quality imagery via proxy from Unsplash, Pexels, and Lorem Picsum.</li>
+    <li><strong>Inspiration:</strong> Fetches daily quotes from ZenQuotes, TypeFit, and Quotes-DB.</li>
+    <li><strong>Weather:</strong> Uses the Open-Meteo API to provide real-time updates based on your location.</li>
+    <li><strong>Search Suggestions:</strong> When you type in the integrated search bar, your query is sent to our Search API <em>solely</em> to provide real-time suggestions. This data is processed in transit, is never stored, and is not linked to your identity.</li>
+  </ul>
+
+  <h2>4. Geolocation Data</h2>
+  <p>Geolocation is used <strong>exclusively</strong> to provide local weather information. The location data is processed locally to determine your city and is never shared, stored, or used for any other purpose.</p>
 
   <h2>5. Local Storage</h2>
-  <p>The extension stores minimal temporary data locally:</p>
+  <p>We use the browser's <code>chrome.storage</code> API to store your preferences locally on your device, including:</p>
   <ul>
-    <li>Cached background images to reduce API calls</li>
-    <li>Time format preference (12/24-hour)</li>
-    <li>Cached weather data (optional, to avoid repeated API calls)</li>
-    <li>Cached search suggestions (temporary, anonymous)</li>
+    <li>UI preferences (12/24-hour time, units).</li>
+    <li>Cached background and quote data for faster loading.</li>
+    <li>Temporary cache for weather and search suggestions.</li>
   </ul>
-  <p>All stored data remains on the device and is never sent externally.</p>
 
-  <h2>6. Remote Code Safety</h2>
-  <p>The extension <strong>does not</strong> execute any remote code. The search API and other data sources only return structured data (JSON). No scripts, eval, or executable content is ever run by the extension.</p>
+  <h2>6. No Remote Code Execution</h2>
+  <p>In compliance with Chrome Web Store safety standards, Zen New Tab <strong>does not</strong> execute remote code. All APIs return structured JSON data only. No scripts, <code>eval()</code>, or executable content is ever fetched from external sources.</p>
 
-  <h2>7. Third-Party Links</h2>
-  <p>Background image credits may link to Unsplash or Pexels photographer pages. See their <a href="https://unsplash.com/privacy" target="_blank">Unsplash privacy policy</a> and <a href="https://www.pexels.com/privacy-policy/" target="_blank">Pexels privacy policy</a> for more information.</p>
+  <h2>7. Third-Party Services</h2>
+  <p>If you click on photographer credits, you may be directed to <a href="https://unsplash.com/privacy" target="_blank">Unsplash</a> or <a href="https://www.pexels.com/privacy-policy/" target="_blank">Pexels</a>. We recommend reviewing their respective privacy policies.</p>
 
-  <h2>8. No Tracking</h2>
-  <p>The extension does not use analytics, tracking, or advertising. All features operate locally on the device.</p>
-
-  <h2>9. Changes to This Policy</h2>
-  <p>This policy may be updated from time to time. When the extension is updated, review this page to stay informed.</p>
-
-  <h2>10. Contact</h2>
-  <p>For questions or concerns, contact the developer at <a href="mailto:geanpaulo@mail.com">geanpaulo@mail.com</a>.</p>
+  <h2>8. Contact</h2>
+  <p>If you have any questions regarding this policy or the Zen New Tab experience, please reach out to the developer at: <a href="mailto:geanpaulo@mail.com">geanpaulo@mail.com</a>.</p>
 
   <footer>
-    &copy; 2026 Zen New Tab. All rights reserved.
+    &copy; 2026 Zen New Tab. Built with a focus on simplicity and privacy.
   </footer>
 </body>
 </html>
